@@ -9,6 +9,7 @@ import time
 
 
 
+
 OLLAMA_URL = os.environ.get('OLLAMA_URL', 'http://localhost:3000')  # Default to localhost if not set
 
 class ExampleTestCase(unittest.TestCase):

@@ -6,6 +6,7 @@ from pages.chat_page import ChatPage
 from selenium.webdriver.chrome.options import Options
 import shutil
 import tempfile
+import time
 
 
 

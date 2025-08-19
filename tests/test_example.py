@@ -1,7 +1,9 @@
+# tests/test_example.py
 import os
 import unittest
 from selenium import webdriver
 from pages.chat_page import ChatPage
+
 
 
 OLLAMA_URL = os.environ.get('OLLAMA_URL', 'http://localhost:3000')  # Default to localhost if not set
@@ -10,6 +12,8 @@ class ExampleTestCase(unittest.TestCase):
     
     
     def setUp(self):
+        options = Options()
+        options.add_argument(f"--user-data-dir={self.user_data_dir}")
         self.driver = webdriver.Chrome()
 
     def tearDown(self):

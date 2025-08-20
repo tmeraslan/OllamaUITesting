@@ -1,13 +1,21 @@
 # pages/chat_mobile_page.py
 from selenium.webdriver.support import expected_conditions as EC
 from .chat_desktop_page import DesktopChatPage
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+
+
 
 class MobileChatPage(DesktopChatPage):
-    """
-    אם במובייל כפתור בחירה/שליחה שונה – תוכל להחליף כאן.
-    כרגע הוא זהה ל-Desktop. דוגמת override לוגית:
-    """
+    SIDEBAR_BUTTON = (By.CSS_SELECTOR, "button[data-state='closed']")
 
-    def send_message(self):
-        # אפשר להשאיר כמו בדסקטופ, או לשנות אם דרוש הקלקה אחרת
-        super().send_message()
+    def click_SIDEBAR_BUTTON(self):
+        self.wait.until(EC.element_to_be_clickable(self.SIDEBAR_BUTTON))
+        self.driver.find_element(*self.SIDEBAR_BUTTON).click()
+
+    
+
+    
+
+
+

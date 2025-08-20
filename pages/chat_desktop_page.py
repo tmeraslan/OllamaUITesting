@@ -12,6 +12,8 @@ class DesktopChatPage(BasePage):
     MODEL_OPTION = (By.XPATH, "//button[normalize-space()='gemma3:1b']")
     MESSAGES = (By.CSS_SELECTOR, ".chat-message")
     US_ICON = (By.XPATH, "//span[text()='US']")
+    NEW_CHAT_BUTTON = (By.XPATH, "//div[normalize-space(.)='New chat']")
+
 
     # פעולות משותפות
     def enter_message(self, message: str):

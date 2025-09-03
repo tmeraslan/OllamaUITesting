@@ -4,6 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
+
+
 class DriverFactory:
     def __init__(self):
         self.browser = os.getenv('BROWSER', 'chrome')
